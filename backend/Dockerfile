@@ -30,7 +30,7 @@ COPY . .
 # Выберите ОДНУ из следующих команд:
 
 # ВАРИАНТ 1: Для разработки (Django runserver)
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 # ВАРИАНТ 2: Для продакшена (Gunicorn)
-# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi"]
